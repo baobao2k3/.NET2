@@ -11,15 +11,13 @@
       <label for="lname">Last name:</label><br />
       <input type="text" id="lname" name="lname" />
     </form>
-    <form>
-      <label for="phone">Enter a phone number:</label>
-      <input
-        type="tel"
-        id="phone"
-        name="phone"
-        placeholder="123-45-678"
-        pattern="[0-9]{3}-[0-9]{2}-[0-9]{3}"
-      />
+    <form action="/action_page.php" method="get">
+      <label for="fname">First name:</label>
+      <input type="text" id="fname" name="fname" /><br /><br />
+      <label for="lname">Last name:</label>
+      <input type="text" id="lname" name="lname" /><br /><br />
+      <input type="submit" value="Submit using GET" />
+      <input type="submit" formmethod="post" value="Submit using POST" />
     </form>
     <form>
       <label for="datemax">Enter a date before 1980-01-01:</label>
