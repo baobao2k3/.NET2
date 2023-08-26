@@ -1,47 +1,32 @@
 <!DOCTYPE html>
 <html>
-  <body>
-    <p>Click the button to get your coordinates.</p>
-
-    <button onclick="getLocation()">Try It</button>
-
-    <p id="demo"></p>
-
+  <head>
     <script>
-      var x = document.getElementById("demo");
-
-      function getLocation() {
-        if (navigator.geolocation) {
-          navigator.geolocation.getCurrentPosition(showPosition, showError);
-        } else {
-          x.innerHTML = "Geolocation is not supported by this browser.";
-        }
+      function allowDrop(ev) {
+        ev.preventDefault();
       }
 
-      function showPosition(position) {
-        x.innerHTML =
-          "Latitude: " +
-          position.coords.latitude +
-          "<br>Longitude: " +
-          position.coords.longitude;
+      function drag(ev) {
+        ev.dataTransfer.setData("text", ev.target.id);
       }
 
-      function showError(error) {
-        switch (error.code) {
-          case error.PERMISSION_DENIED:
-            x.innerHTML = "User denied the request for Geolocation.";
-            break;
-          case error.POSITION_UNAVAILABLE:
-            x.innerHTML = "Location information is unavailable.";
-            break;
-          case error.TIMEOUT:
-            x.innerHTML = "The request to get user location timed out.";
-            break;
-          case error.UNKNOWN_ERROR:
-            x.innerHTML = "An unknown error occurred.";
-            break;
-        }
+      function drop(ev) {
+        ev.preventDefault();
+        var data = ev.dataTransfer.getData("text");
+        ev.target.appendChild(document.getElementById(data));
       }
     </script>
+  </head>
+  <body>
+    <div id="div1" ondrop="drop(event)" ondragover="allowDrop(event)"></div>
+
+    <img
+      id="drag1"
+      src="https://images.unsplash.com/photo-1503023345310-bd7c1de61c7d?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxzZWFyY2h8Mnx8aHVtYW58ZW58MHx8MHx8fDA%3D&w=1000&q=80"
+      draggable="true"
+      ondragstart="drag(event)"
+      width="336"
+      height="1000"
+    />
   </body>
 </html>
