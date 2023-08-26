@@ -2,10 +2,14 @@
 <!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.1//EN" "http://www.w3.org/TR/xhtml11/DTD/xhtml11.dtd">
 <html xmlns="http://www.w3.org/1999/xhtml">
   <head>
-    <title>Title of document</title>
+    <title>HTML Forms</title>
   </head>
   <body>
-    <input type="checkbox" name="vehicle" value="car" checked="checked" />
-    <input type="text" name="lastname" disabled="disabled" />
+    <form>
+      <label for="fname">First name:</label><br />
+      <input type="text" id="fname" name="fname" /><br />
+      <label for="lname">Last name:</label><br />
+      <input type="text" id="lname" name="lname" />
+    </form>
   </body>
 </html>
