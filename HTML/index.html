@@ -5,39 +5,40 @@
     <title>HTML Input Attributes</title>
   </head>
   <body>
-    <form>
-      <label for="fname">First name:</label><br />
-      <input type="text" id="fname" name="fname" /><br />
-      <label for="lname">Last name:</label><br />
-      <input type="text" id="lname" name="lname" />
-    </form>
-    <form action="/action_page.php" method="get">
-      <label for="fname">First name:</label>
-      <input type="text" id="fname" name="fname" /><br /><br />
-      <label for="lname">Last name:</label>
-      <input type="text" id="lname" name="lname" /><br /><br />
-      <input type="submit" value="Submit using GET" />
-      <input type="submit" formmethod="post" value="Submit using POST" />
-    </form>
-    <form>
-      <label for="datemax">Enter a date before 1980-01-01:</label>
-      <input
-        type="date"
-        id="datemax"
-        name="datemax"
-        max="1979-12-31"
-      /><br /><br />
+    <canvas id="myCanvas" width="200" height="100"></canvas>
+    <canvas
+      id="myCanvas"
+      width="200"
+      height="100"
+      style="border: 1px solid #000000"
+    >
+    </canvas>
+    <!-- <script>
+      var c = document.getElementById("myCanvas");
+      var ctx = c.getContext("2d");
+      ctx.moveTo(0, 0);
+      ctx.lineTo(200, 100);
+      ctx.stroke();
+    </script> -->
+    <!-- <script>
+      var c = document.getElementById("myCanvas");
+      var ctx = c.getContext("2d");
+      ctx.beginPath();
+      ctx.arc(95, 50, 40, 0, 2 * Math.PI);
+      ctx.stroke();
+    </script> -->
+    <script>
+      var c = document.getElementById("myCanvas");
+      var ctx = c.getContext("2d");
 
-      <label for="datemin">Enter a date after 2000-01-01:</label>
-      <input
-        type="date"
-        id="datemin"
-        name="datemin"
-        min="2000-01-02"
-      /><br /><br />
+      // Create gradient
+      var grd = ctx.createLinearGradient(0, 0, 200, 0);
+      grd.addColorStop(0, "red");
+      grd.addColorStop(1, "white");
 
-      <label for="quantity">Quantity (between 1 and 5):</label>
-      <input type="number" id="quantity" name="quantity" min="1" max="5" />
-    </form>
+      // Fill with gradient
+      ctx.fillStyle = grd;
+      ctx.fillRect(10, 10, 150, 80);
+    </script>
   </body>
 </html>
