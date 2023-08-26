@@ -1,0 +1,23 @@
+.text-blue{
+    color: blue;
+    text-decoration:underline;
+}
+table{
+    background-color: #2ece20;
+}
+.department{
+    background-color: #2ece20;
+}
+.title{
+    text-align: center;
+}
+table{
+        width: 100%;
+}
+.description{
+  font-weight: 500;
+}
+.row{
+    display: flex;
+}
+ 
