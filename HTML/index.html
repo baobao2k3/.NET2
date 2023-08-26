@@ -1,55 +1,62 @@
 <!DOCTYPE html>
 <html lang="en">
+  <head>
+    <title>HTML Computer Code Elements</title>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+  </head>
 
-<head>
-    <title>HTML Responsive Web Design</title>
-    <meta charset="utf-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1">
-</head>
-
-<body>
-
-<style>
-    .grid {
+  <body>
+    <style>
+      .grid {
         display: flex;
         flex-wrap: wrap;
-    }
+      }
 
-    .column {
+      .column {
         flex: 0 0 8.33%;
         /* Take up 8.33% of the grid (12 columns) */
         background-color: red;
         color: white;
         text-align: center;
         font-family: sans-serif;
-    }
+      }
 
-    .column:nth-child(2n) {
+      .column:nth-child(2n) {
         background-color: blue;
-    }
+      }
 
-    /* Use media queries to apply different styles based on screen width */
-    @media (max-width: 600px) {
+      /* Use media queries to apply different styles based on screen width */
+      @media (max-width: 600px) {
         .column {
-            flex: 0 0 50%;
-            /* Take up 50% of the grid on small screens */
+          flex: 0 0 50%;
+          /* Take up 50% of the grid on small screens */
         }
-    }
-</style>
-<div class="grid">
-    <div class="column">1</div>
-    <div class="column">2</div>
-    <div class="column">3</div>
-    <div class="column">4</div>
-    <div class="column">5</div>
-    <div class="column">6</div>
-    <div class="column">7</div>
-    <div class="column">8</div>
-    <div class="column">9</div>
-    <div class="column">10</div>
-    <div class="column">11</div>
-    <div class="column">12</div>
-</div>
-</body>
-
+      }
+    </style>
+    <div class="grid">
+      <div class="column">1</div>
+      <div class="column">2</div>
+      <div class="column">3</div>
+      <div class="column">4</div>
+      <div class="column">5</div>
+      <div class="column">6</div>
+      <div class="column">7</div>
+      <div class="column">8</div>
+      <div class="column">9</div>
+      <div class="column">10</div>
+      <div class="column">11</div>
+      <div class="column">12</div>
+    </div>
+    <code> x = 5; y = 6; z = x + y; </code>
+    <p>Save the document by pressing <kbd>Ctrl + S</kbd></p>
+    <p>Message from my computer:</p>
+    <p>
+      <samp>File not found.<br />Press F1 to continue</samp>
+    </p>
+    <p>
+      The area of a triangle is: 1/2 x <var>b</var> x <var>h</var>, where
+      <var>b</var> is the base, and <var>h</var> is the vertical height.
+    </p>
+  </body>
 </html>
