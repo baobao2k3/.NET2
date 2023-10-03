@@ -1,0 +1,14 @@
+E:\.NET2\LearningArr\obj\Debug\net7.0\LearningArr.GeneratedMSBuildEditorConfig.editorconfig
+E:\.NET2\LearningArr\obj\Debug\net7.0\LearningArr.AssemblyInfoInputs.cache
+E:\.NET2\LearningArr\obj\Debug\net7.0\LearningArr.AssemblyInfo.cs
+E:\.NET2\LearningArr\obj\Debug\net7.0\LearningArr.csproj.CoreCompileInputs.cache
+E:\.NET2\LearningArr\bin\Debug\net7.0\LearningArr.exe
+E:\.NET2\LearningArr\bin\Debug\net7.0\LearningArr.deps.json
+E:\.NET2\LearningArr\bin\Debug\net7.0\LearningArr.runtimeconfig.json
+E:\.NET2\LearningArr\bin\Debug\net7.0\LearningArr.dll
+E:\.NET2\LearningArr\bin\Debug\net7.0\LearningArr.pdb
+E:\.NET2\LearningArr\obj\Debug\net7.0\LearningArr.dll
+E:\.NET2\LearningArr\obj\Debug\net7.0\refint\LearningArr.dll
+E:\.NET2\LearningArr\obj\Debug\net7.0\LearningArr.pdb
+E:\.NET2\LearningArr\obj\Debug\net7.0\LearningArr.genruntimeconfig.cache
+E:\.NET2\LearningArr\obj\Debug\net7.0\ref\LearningArr.dll
