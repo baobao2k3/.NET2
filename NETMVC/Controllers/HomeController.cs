@@ -1,8 +1,8 @@
 ﻿using System.Diagnostics;
 using Microsoft.AspNetCore.Mvc;
-using NETMVC.Models;
+using NetMVC.Models;
 
-namespace NETMVC.Controllers;
+namespace NetMVC.Controllers;
 
 public class HomeController : Controller
 {
@@ -12,18 +12,16 @@ public class HomeController : Controller
     {
         _logger = logger;
     }
-
     public IActionResult Index()
     {
+        ViewBag.thongBao = "Du lieu HttpGet";
         return View();
     }
-
-    public IActionResult Privacy()
+    [HttpPost]
+    public IActionResult Index(string FullName, string Email)
     {
-        return View();
-    }
-    public IActionResult Profile()
-    {
+        string strOutput = "Hello " + FullName.ToUpper() + "-" + Email;
+        ViewBag.thongBao = strOutput;
         return View();
     }
 
