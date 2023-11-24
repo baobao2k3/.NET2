@@ -1,54 +1,48 @@
 @model IEnumerable<NetMVC.Models.Person>
-
 @{
     ViewData["Title"] = "Index";
 }
-
 <h1>Index</h1>
-
 <p>
-    @* <a asp-action="Create">Create New</a> *@
-    <button onclick="document.getElementById('id01').style.display='block'" class="w3-button w3-black">Create Person</button>
+    <a asp-action="Create">Create New</a>
 </p>
-<table class="table">
+<table class="w3-table w3-table-all">
     <thead>
-        <tr>
+        <tr class="w3-blue">
+            <th>
+                @Html.DisplayNameFor(model => model.PersonID)
+            </th>
             <th>
                 @Html.DisplayNameFor(model => model.FullName)
             </th>
             <th>
                 @Html.DisplayNameFor(model => model.Address)
             </th>
-            <th></th>
+            <th>
+                Options
+            </th>
         </tr>
     </thead>
     <tbody>
-@foreach (var item in Model) {
-        <tr>
-            <td>
-                @Html.DisplayFor(modelItem => item.FullName)
-            </td>
-            <td>
-                @Html.DisplayFor(modelItem => item.Address)
-            </td>
-            <td>
-                <a asp-action="Edit" asp-route-id="@item.PersonID">Edit</a> |
-                <a asp-action="Details" asp-route-id="@item.PersonID">Details</a> |
-                <a asp-action="Delete" asp-route-id="@item.PersonID">Delete</a>
-            </td>
-        </tr>
-}
+        @foreach(var item in Model){
+            <tr>
+                <td>
+                    @Html.DisplayFor(modelItem => item.PersonID)
+                </td>
+                <td>
+                    @Html.DisplayFor(modelItem => item.FullName)
+                </td>
+                <td>
+                    @Html.DisplayFor(modelItem => item.Address)
+                </td>
+                <td>
+                    <a asp-action="Edit" asp-route-id ="@item.PersonID">Edit</a>
+                    <a asp-action="Delete" asp-route-id ="@item.PersonID">Delete</a>
+                </td>
+            </tr>
+        }
     </tbody>
 </table>
-@* <div id="id01" class="w3-modal">
-    @Html.Partial("_Create")
-</div> *@
-<div id="id01" class="w3-modal">
-  <div class="w3-modal-content">
-    <div class="w3-container">
-      <span onclick="document.getElementById('id01').style.display='none'"
-      class="w3-button w3-display-topright">&times;</span>
-      @Html.Partial("_Create")
-    </div>
-  </div>
-</div>
+<h1>
+    
+</h1>

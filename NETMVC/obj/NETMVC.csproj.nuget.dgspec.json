@@ -1,17 +1,17 @@
 {
   "format": 1,
   "restore": {
-    "D:\\NetMVC\\NetMVC.csproj": {}
+    "D:\\.NET2\\NetMVC\\NetMVC.csproj": {}
   },
   "projects": {
-    "D:\\NetMVC\\NetMVC.csproj": {
+    "D:\\.NET2\\NetMVC\\NetMVC.csproj": {
       "version": "1.0.0",
       "restore": {
-        "projectUniqueName": "D:\\NetMVC\\NetMVC.csproj",
+        "projectUniqueName": "D:\\.NET2\\NetMVC\\NetMVC.csproj",
         "projectName": "NetMVC",
-        "projectPath": "D:\\NetMVC\\NetMVC.csproj",
+        "projectPath": "D:\\.NET2\\NetMVC\\NetMVC.csproj",
         "packagesPath": "C:\\Users\\OS\\.nuget\\packages\\",
-        "outputPath": "D:\\NetMVC\\obj\\",
+        "outputPath": "D:\\.NET2\\NetMVC\\obj\\",
         "projectStyle": "PackageReference",
         "configFilePaths": [
           "C:\\Users\\OS\\AppData\\Roaming\\NuGet\\NuGet.Config"
@@ -38,6 +38,10 @@
         "net7.0": {
           "targetAlias": "net7.0",
           "dependencies": {
+            "EPPlus": {
+              "target": "Package",
+              "version": "[7.0.1, )"
+            },
             "Microsoft.EntityFrameworkCore.Design": {
               "include": "Runtime, Build, Native, ContentFiles, Analyzers, BuildTransitive",
               "suppressParent": "All",
@@ -45,6 +49,10 @@
               "version": "[7.0.13, )"
             },
             "Microsoft.EntityFrameworkCore.SQLite": {
+              "target": "Package",
+              "version": "[7.0.13, )"
+            },
+            "Microsoft.EntityFrameworkCore.SqlServer": {
               "target": "Package",
               "version": "[7.0.13, )"
             },

@@ -12,16 +12,35 @@ public class HomeController : Controller
     {
         _logger = logger;
     }
+
     public IActionResult Index()
     {
-        ViewBag.thongBao = "Du lieu HttpGet";
         return View();
     }
     [HttpPost]
-    public IActionResult Index(string FullName, string Email)
+    public IActionResult Index(string a, string b, string c)
     {
-        string strOutput = "Hello " + FullName.ToUpper() + "-" + Email;
-        ViewBag.thongBao = strOutput;
+        double so1 = double.Parse(a);
+        double so2 = double.Parse(b);
+        double so3 = double.Parse(c);
+        string Result = "";
+        double delta = (so2 * so2) - (4 * so1 * so3);
+        if (so1 == 0) Result = $"Phuong trinh co nghiem duy nhat la {-so3 / so2}";
+        
+        if (delta < 0)Result = "0";
+        
+        else if (delta == 0) Result = $"x1 = x2 = {-so2 / (2 * so1)}";
+        else
+        {
+            double x1 = (-so2 + Math.Sqrt(delta)) / (2 * so1);
+            double x2 = (-so2 - Math.Sqrt(delta)) / (2 * so1);
+            Result = $"Nghiệm là x1 = {x1}, x2 = {x2}";
+        }
+        ViewBag.thongBao = Result;
+        return View();
+    }
+    public IActionResult Privacy()
+    {
         return View();
     }
 
@@ -31,3 +50,4 @@ public class HomeController : Controller
         return View(new ErrorViewModel { RequestId = Activity.Current?.Id ?? HttpContext.TraceIdentifier });
     }
 }
+
